@@ -1,0 +1,527 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(16, 6, 70);
+}
+
+.heading{
+  background-color: rgb(247, 94, 120);
+  height: 170px;
+  width: 55%;
+  margin: 2em auto 1em auto;
+  border-radius: 14px;
+}
+
+.heading h1{
+  font-size: 3.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+  padding: 0.8em 0 0 0 ;
+  text-transform: uppercase;
+}
+
+.heading p{
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+}
+
+.countingBoxes{
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  margin: 0 auto;
+}
+
+.Box{
+  width:30%;
+  height: 180px;
+  background-color: rgba(255, 255, 255, 0.185);
+  margin:0 1em 0 1em;
+  border-radius: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 50px;
+  border:2.5px solid rgba(157, 157, 233, 0.514);
+}
+
+.Box h3{
+  font-size: 2.5rem;
+  color: rgb(247, 94, 120);
+}
+
+.Box p{
+  font-size: 0.8rem;
+  color: rgb(192, 188, 188);
+  margin: 0.7em 0 0 0;
+  font-weight: 600;
+}
+.main{
+  width: 55%;
+  height: 200px;
+ background-color: rgba(255, 255, 255, 0.185);
+  margin: 1em auto;
+  border-radius: 14px;
+  border:2.5px solid rgba(157, 157, 233, 0.514);
+  padding: 20px;
+
+}
+
+.main h3{
+  font-size: 1.5rem;
+   color: rgb(247, 94, 120);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputsmain{
+  height: 45px;
+  width: 24%;
+  padding: 10px 8px;
+  margin: 10px 0px;
+  border-radius: 8px;
+ background-color: rgb(11, 3, 53);
+ border:2.5px solid rgba(157, 157, 233, 0.514);
+ color: rgb(192, 188, 188);
+}
+
+.main button{
+  height: 50px;
+  width: 97%;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: rgb(247, 94, 120);
+  color: white;
+  border: none;
+}
+
+.main button:hover{
+  background-color: rgb(240, 70, 98);
+}
+
+.filtermain{
+  display: flex;
+ width: 55%;
+  height: 100px;
+ background-color: rgba(255, 255, 255, 0.185);
+  margin: 1em auto;
+  border-radius: 14px;
+  border:2.5px solid rgba(157, 157, 233, 0.514);
+  padding: 20px; 
+}
+
+#filtering{
+  height: 45px;
+  width: 120px;
+  padding: 10px 8px;
+  border-radius: 8px;
+ background-color: rgb(11, 3, 53);
+ border:2.5px solid rgba(157, 157, 233, 0.514);
+ color: rgb(192, 188, 188);
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 1rem;
+}
+
+.filtered .active{
+  height: 45px;
+  width: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  border-radius: 8px;
+ background-color: rgb(247, 94, 120);
+ margin: 0 0 0 5px ;
+ border:2.5px solid rgba(157, 157, 233, 0.514);
+ color: rgb(192, 188, 188);
+ font-weight: 700;
+}
+
+.filter{
+  height: 45px;
+  width: 120px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  margin: 0 5px;
+ background-color: rgb(11, 3, 53);
+ border:2.5px solid rgba(157, 157, 233, 0.514);
+ color: rgb(192, 188, 188);
+}
+
+.weekBoxes {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.day-box {
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.day-box.done {
+  background: #d4edda;
+  border-color: #28a745;
+}
+
+.day-box.missed {
+  background: #f8d7da;
+  border-color: #dc3545;
+}
+
+.day-box.rest {
+  background: #fff3cd;
+  border-color: #ffc107;
+}
+
+.day-icon {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.day-label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #666;
+}
+
+#workoutList {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.workoutStore {
+  background-color: rgba(255, 255, 255, 0.185);
+  border: 2.5px solid rgba(157, 157, 233, 0.514);
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.workoutStore.completed {
+  border-color: rgb(247, 94, 120);
+  box-shadow: 0 0 15px rgba(247, 94, 120, 0.3);
+}
+
+
+.workoutStore .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(157, 157, 233, 0.3);
+}
+
+.workoutStore .header .heading {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.workoutStore .header .heading h2 {
+  font-size: 1.8rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  text-transform: none;
+}
+
+.workoutStore .header .heading span {
+  color: rgb(192, 188, 188);
+  font-size: 1rem;
+}
+
+.workoutStore .header > span {
+  background-color: rgb(247, 94, 120);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.mainThing {
+  margin-bottom: 20px;
+}
+
+.Inputs\&Btn {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.Inputs\&Btn input {
+  flex: 1;
+  height: 45px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(11, 3, 53);
+  border: 2.5px solid rgba(157, 157, 233, 0.514);
+  color: rgb(192, 188, 188);
+  font-size: 1rem;
+}
+
+.Inputs\&Btn input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.complete-Btn {
+  height: 45px;
+  padding: 0 25px;
+  border-radius: 8px;
+  background-color: rgb(247, 94, 120);
+  color: white;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.complete-Btn:hover {
+  background-color: rgb(240, 70, 98);
+}
+
+.complete-Btn.completed {
+  background-color: rgb(40, 167, 69);
+  cursor: not-allowed;
+}
+
+.mainThing > span {
+  display: block;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Progress {
+  width: 100%;
+  height: 15px;
+  background-color: rgba(11, 3, 53, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid rgba(157, 157, 233, 0.514);
+}
+
+.ProgressBar {
+  height: 100%;
+  background: linear-gradient(90deg, rgb(247, 94, 120) 0%, rgb(255, 120, 140) 100%);
+  transition: width 0.3s ease;
+  border-radius: 8px;
+}
+
+
+.workoutBoxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.workBox {
+  background-color: rgba(11, 3, 53, 0.6);
+  border: 2px solid rgba(157, 157, 233, 0.514);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.workBox p {
+  font-size: 2rem;
+  color: rgb(247, 94, 120);
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.workBox h3 {
+  font-size: 0.85rem;
+  color: rgb(192, 188, 188);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+
+.weekBoxes {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.delete-Btn {
+  width: 100%;
+  height: 45px;
+  background-color: rgb(220, 53, 69);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.delete-Btn:hover {
+  background-color: rgb(200, 35, 51);
+}
+
+.Emptytype {
+  background-color: rgba(255, 255, 255, 0.185);
+  border: 2.5px solid rgba(157, 157, 233, 0.514);
+  border-radius: 14px;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Emptytype h2 {
+  font-size: 2rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+.Emptytype p {
+  font-size: 1rem;
+  color: rgb(192, 188, 188);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 1300px){
+  .heading, .filtermain,.countingBoxes,.main , #workoutList{
+    width: 95%;
+  }
+
+}
+
+@media (max-width: 700px){
+
+  .heading h1{
+    padding: 55px 0 0 0;
+    font-size: 2rem;
+  }
+  .countingBoxes{
+    flex-direction: column;
+  }
+  .Box{
+    width: 100%;
+    height: 100px;
+    margin: 0.5em 0;
+    padding: 20px;
+  }
+  .filtermain{
+    height: 20%;
+    flex-direction: column;
+  }
+
+  #filtering{
+    width: 92%;
+    padding: 10px;
+    margin: 1em 0.5em 0 0.5em;
+  }
+
+ .filtered .active{
+    width: 90%;
+        margin: 1em 0.5em 0 0.5em;
+
+  }
+  .filter{
+    width: 90%;
+        margin: 1em 0.5em 0 0.5em;
+
+  }
+
+  .workoutBoxes {
+    grid-template-columns: 1fr;
+  }
+
+  .Inputs\&Btn {
+    flex-direction: column;
+  }
+
+  .Inputs\&Btn input,
+  .complete-Btn {
+    width: 100%;
+  }
+
+  .weekBoxes {
+    gap: 5px;
+  }
+
+  .day-box {
+    padding: 10px 5px;
+  }
+
+  .day-icon {
+    font-size: 1.5rem;
+  }
+
+  .workoutStore .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 360px){
+
+  .heading h1{
+    font-size: 1.5rem;
+  }
+
+  .heading p{
+    font-size: 0.8rem;
+  }
+  .main{
+    height: 40%;
+    width: 100%;
+  }
+
+  .main h3{
+    font-size: 1.5rem;
+  }
+
+  .inputsmain{
+    width: 45%;
+  }
+
+   .workoutStore .header .heading h2 {
+    font-size: 1.3rem;
+  }
+
+  .workBox p {
+    font-size: 1.5rem;
+  }
+}

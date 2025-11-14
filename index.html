@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Fitness Tracker App</title>
+</head>
+<body>
+  <div class="heading">
+    <h1>Fitness Tracker App</h1>
+    <p>Track your daily workout here</p>
+  </div>
+  <div class="countingBoxes">
+    <div class="Box" id="totalworkoutbox">
+      <h3 id="Total">0</h3>
+      <p>TOTAL WORKOUT</p>
+    </div>
+    <div class="Box"id="activedaysbox">
+      <h3 id="Active">0</h3>
+      <p>ACTIVE DAYS</p>
+    </div>
+    <div class="Box" id="streakcountbox">
+      <h3 id="Streak">0</h3>
+      <p>BEST STREAK</p>
+    </div>
+    <div class="Box" id="weekcountbox">
+      <h3 id="Week">0</h3>
+      <p>THIS WEEK</p>
+    </div>
+  </div>
+  <div class="main" id="main">
+    <h3>Add New Workout</h3>
+    <input type="text" name=""  class="inputsmain" id="workoutInput" placeholder="Enter your Workouts">
+    <select name="" id="type" class="inputsmain" >
+      <option value="strength">Strength</option>
+      <option value="cardio">Cardio</option>
+      <option value="weightLift">Weight lift</option>
+    </select>
+    <input type="number" placeholder="Target" class="inputsmain"  id="inputs">
+    <select name="" id="units" class="inputsmain" >
+      <option value="reps">Reps</option>
+      <option value="min">Min</option>
+      <option value="km">KM</option>
+      <option value="sets">Sets</option>
+    </select> <br>
+    <button class="addBtn" id="addBtn">Add Workout</button>
+  </div>
+  <div class="filtermain">
+ <div class="filteredtype">
+  <select name="" id="filtering">
+    <option value="all">All Type</option>
+    <option value="strength">Strength</option>
+    <option value="cardio">Cardio</option>
+    <option value="weightLift">Weight Lift</option>
+  </select>
+</div>
+  <div class="filtered">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="active streak">Active Streak</button>
+    <button class="filter" data-filter="notdonetoday">Not Done Today</button>
+    <button class="filter" data-filter="completed">Completed</button>
+  </div>
+  </div>
+
+  <div id="workoutList"></div>
+</body>
+<script src="script.js"></script>
+</html>
