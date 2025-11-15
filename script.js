@@ -14,7 +14,7 @@ class Fitness{
 
 };
 
-// let fitness = new Habit("pushups" , "strength", 30, "reps")  ignore just tesing
+// let fitness = new Habit("pushups" , "strength", 30, "reps")  ignore just testing
 // console.log(fitness.type)
 
 class FitnessManager{
@@ -195,8 +195,8 @@ class FitnessManager{
   };
 
   getActiveWorkouts(){
-    let today = new Date().toDateString();
-    return this.#fitness.filter(f => f.sessions.some(s => s.completed)).length;
+    let fitness = this.#fitness;
+    return fitness.filter(f => f.sessions.some(s => s.completed)).length;
   };
 
   getBestStreak(){
@@ -323,7 +323,7 @@ renderFitnessList(filter = "all"){
     <div class="header">
     <div class="heading">
     <h2>${fitness.name}</h2>
-    <span>${fitness.target}</span>
+    <span>${fitness.target} ${fitness.units}</span>
     </div>
     <span>${fitness.type}</span>
     </div>
@@ -350,9 +350,12 @@ renderFitnessList(filter = "all"){
     <p>${fitness.totalSessions}</p>
     <h3>Total</h3>
     </div>
+    </div>
     <div class="weekBoxes">${this.renderWeek(fitness.id)}
     </div>
     <button class="delete-Btn" data-id="${fitness.id}">Delete</button>
+        <button class="restDay" data-id="${fitness.id}">Rest Day</button>
+
     </div>
     `
   }).join('')
@@ -440,6 +443,12 @@ class App{
 
         }
 
+        if(e.target.classList.contains("restDay")){
+          let id = parseFloat(e.target.dataset.id)
+          this.manager.markRestday(id);
+          this.renderer.renderAll()
+        }
+
       })
 
           document.getElementById("filtering").addEventListener("change", (e) => {
@@ -467,3 +476,6 @@ class App{
 }
 
 let app = new App();
+
+let manager =  new FitnessManager();
+console.log(manager.getFitness())
