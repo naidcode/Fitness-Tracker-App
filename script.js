@@ -355,6 +355,7 @@ renderFitnessList(filter = "all"){
     </div>
     <button class="delete-Btn" data-id="${fitness.id}">Delete</button>
         <button class="restDay" data-id="${fitness.id}">Rest Day</button>
+         <p id="message"></p>
 
     </div>
     `
@@ -397,6 +398,7 @@ class App{
 
   saveeventListener(){
     document.getElementById("addBtn").addEventListener("click" , (e)=> {
+      let message = document.getElementById("message")
       let input = document.getElementById("workoutInput");
       let type = document.getElementById("type");
       let input2 = document.getElementById("inputs");
@@ -408,15 +410,18 @@ class App{
       let unit = type2.value;
 
       if(!name || !target){
-        alert("please enter the workout name");
-        return
+        message.textContent = "⚠️ Please enter the workout name";
+        message.classList.add("message")
+       setTimeout(() => {
+        message.textContent = ""
+        message.classList.remove("message")
+      }, 3000)
+      return
       } 
 
       this.manager.addWorkout(name,strength,target,unit);
       input.value = "";
-      type.value = "";
       input2.value = "";
-      type2.value = "";
 
       this.renderer.renderAll()
 

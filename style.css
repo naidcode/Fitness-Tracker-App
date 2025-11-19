@@ -134,7 +134,7 @@ body{
   height: 45px;
   width: 90px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border-radius: 8px;
  background-color: rgb(247, 94, 120);
  margin: 0 0 0 5px ;
@@ -370,11 +370,25 @@ body{
   margin: 0;
 }
 
+.message{
+  width: 55%;
+  height: 60px;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 16px 0;
+  font-size: 20px;
+  color: rgb(255, 72, 0);
+  text-align: center;
+  margin: 1em auto;
+ background-color: rgba(255, 255, 255, 0.185);
+  border:2.5px solid rgba(157, 157, 233, 0.514);
+}
+
 
 .weekBoxes {
   display:flex;
   gap: 10px;
-  margin: 20px 130px;
+  margin: 20px 0px;
 }
 
 .delete-Btn {
